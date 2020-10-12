@@ -12,7 +12,7 @@ class CashRegister
 
   def add_item(item, price, quantity = 1)
     @items << ("#{item} " * quantity).split(" ")
-    @items.flatten!
+    @items.flatten
     @total += price * quantity
     @prev_total = @total
     @prev_total
