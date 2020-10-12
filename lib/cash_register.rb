@@ -14,9 +14,8 @@ def add_item(item, price, quantity = 1)
   quantity.times do
     @items << item
   end
+  @last_total = total
    @total += price * quantity
-   @prev_total = @total
-   @prev_total
 end
 
 
