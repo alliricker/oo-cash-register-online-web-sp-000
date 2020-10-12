@@ -11,16 +11,8 @@ class CashRegister
 
 
   def add_item(item, price, quantity = 1)
-   if quantity >= 2
-      i = 0
-       while i < quantity
-       @items << item
-       i += 1
-       end
-      else
-       @items << item
-    end
-
+    @items <<("#{title} " * quantity).split(" ")
+    @items.flatten!
     @total += price * quantity
     @prev_total = @total
     @prev_total
