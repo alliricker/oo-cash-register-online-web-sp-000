@@ -30,7 +30,7 @@ end
   end
 
 def void_last_transaction()
-  @total.to_f -= @previous_total.to_f
+  self.total -= self.prev_total
 end
 
 end
